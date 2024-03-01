@@ -1,6 +1,6 @@
 const { requestApi, removeTags, getEnvCookies, wait } = require('./bot');
-const notify = require('../sendNotify');
-const Env = require('../env');
+const notify = require('./sendNotify');
+const Env = require('./env');
 
 const $ = new Env('xiaolu 每日穿衣指南');
 
