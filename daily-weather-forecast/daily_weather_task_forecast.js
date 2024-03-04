@@ -109,7 +109,13 @@ class WeatherTaskBot {
 
   const { indicesDetail, headTitle, dailyForecastsDetail } = await bot.run();
 
-  const msg = `蝶宝，现在是${new Date().toLocaleString()}，${headTitle.Text}，\n明天温度最高温度${dailyForecastsDetail.Temperature.Maximum.Value}℃，最低温度${dailyForecastsDetail.Temperature.Minimum.Value}℃，${indicesDetail.Text}`;
+  const msg = `蝶宝，现在是${new Date().toLocaleString()}，${
+    headTitle.Text
+  }，\n明天最高温度${
+    dailyForecastsDetail.Temperature.Maximum.Value
+  }℃，最低温度${dailyForecastsDetail.Temperature.Minimum.Value}℃，平均湿度为${
+    dailyForecastsDetail.Day.RelativeHumidity.Average
+  }，${dailyForecastsDetail.Day.LongPhrase}，\n${indicesDetail.Text}`;
 
   await notify.sendNotify(
     `小鹿贴心穿衣指数预报: ${indicesDetail.Category}`,
