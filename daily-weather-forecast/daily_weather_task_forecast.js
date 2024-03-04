@@ -115,7 +115,7 @@ class WeatherTaskBot {
     `小鹿贴心穿衣指数预报: ${indicesDetail.Category}`,
     msg,
     {
-      url: indicesDetail.url,
+      url: indicesDetail.MobileLink,
       // group: "xiaolu_trips",
       // sound: 'minuet.typewriters'
     },
