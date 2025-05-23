@@ -138,69 +138,69 @@ let SMTP_PASSWORD = '';
 let SMTP_NAME = '';
 
 //==========================云端环境变量的判断与接收=========================
-if (process.env.GOTIFY_URL) {
-  GOTIFY_URL = process.env.GOTIFY_URL;
+if (process.env.Horsemi_EPIC_FREE_GOTIFY_URL) {
+  GOTIFY_URL = process.env.Horsemi_EPIC_FREE_GOTIFY_URL;
 }
-if (process.env.GOTIFY_TOKEN) {
-  GOTIFY_TOKEN = process.env.GOTIFY_TOKEN;
+if (process.env.Horsemi_EPIC_FREE_GOTIFY_TOKEN) {
+  GOTIFY_TOKEN = process.env.Horsemi_EPIC_FREE_GOTIFY_TOKEN;
 }
-if (process.env.GOTIFY_PRIORITY) {
-  GOTIFY_PRIORITY = process.env.GOTIFY_PRIORITY;
-}
-
-if (process.env.GOBOT_URL) {
-  GOBOT_URL = process.env.GOBOT_URL;
-}
-if (process.env.GOBOT_TOKEN) {
-  GOBOT_TOKEN = process.env.GOBOT_TOKEN;
-}
-if (process.env.GOBOT_QQ) {
-  GOBOT_QQ = process.env.GOBOT_QQ;
+if (process.env.Horsemi_EPIC_FREE_GOTIFY_PRIORITY) {
+  GOTIFY_PRIORITY = process.env.Horsemi_EPIC_FREE_GOTIFY_PRIORITY;
 }
 
-if (process.env.PUSH_KEY) {
-  SCKEY = process.env.PUSH_KEY;
+if (process.env.Horsemi_EPIC_FREE_GOBOT_URL) {
+  GOBOT_URL = process.env.Horsemi_EPIC_FREE_GOBOT_URL;
+}
+if (process.env.Horsemi_EPIC_FREE_GOBOT_TOKEN) {
+  GOBOT_TOKEN = process.env.Horsemi_EPIC_FREE_GOBOT_TOKEN;
+}
+if (process.env.Horsemi_EPIC_FREE_GOBOT_QQ) {
+  GOBOT_QQ = process.env.Horsemi_EPIC_FREE_GOBOT_QQ;
 }
 
-if (process.env.DEER_KEY) {
-  PUSHDEER_KEY = process.env.DEER_KEY;
-  PUSHDEER_URL = process.env.DEER_URL;
+if (process.env.Horsemi_EPIC_FREE_PUSH_KEY) {
+  SCKEY = process.env.Horsemi_EPIC_FREE_PUSH_KEY;
 }
 
-if (process.env.CHAT_URL) {
-  CHAT_URL = process.env.CHAT_URL;
+if (process.env.Horsemi_EPIC_FREE_DEER_KEY) {
+  PUSHDEER_KEY = process.env.Horsemi_EPIC_FREE_DEER_KEY;
+  PUSHDEER_URL = process.env.Horsemi_EPIC_FREE_DEER_URL;
 }
 
-if (process.env.CHAT_TOKEN) {
-  CHAT_TOKEN = process.env.CHAT_TOKEN;
+if (process.env.Horsemi_EPIC_FREE_CHAT_URL) {
+  CHAT_URL = process.env.Horsemi_EPIC_FREE_CHAT_URL;
 }
 
-if (process.env.QQ_SKEY) {
-  QQ_SKEY = process.env.QQ_SKEY;
+if (process.env.Horsemi_EPIC_FREE_CHAT_TOKEN) {
+  CHAT_TOKEN = process.env.Horsemi_EPIC_FREE_CHAT_TOKEN;
 }
 
-if (process.env.QQ_MODE) {
-  QQ_MODE = process.env.QQ_MODE;
+if (process.env.Horsemi_EPIC_FREE_QQ_SKEY) {
+  QQ_SKEY = process.env.Horsemi_EPIC_FREE_QQ_SKEY;
 }
 
-if (process.env.BARK_PUSH) {
+if (process.env.Horsemi_EPIC_FREE_QQ_MODE) {
+  QQ_MODE = process.env.Horsemi_EPIC_FREE_QQ_MODE;
+}
+
+if (process.env.Horsemi_EPIC_FREE_BARK_PUSH) {
   if (
-    process.env.BARK_PUSH.indexOf('https') > -1 ||
-    process.env.BARK_PUSH.indexOf('http') > -1
+    process.env.Horsemi_EPIC_FREE_BARK_PUSH.indexOf('https') > -1 ||
+    process.env.Horsemi_EPIC_FREE_BARK_PUSH.indexOf('http') > -1
   ) {
     //兼容BARK自建用户
-    BARK_PUSH = process.env.BARK_PUSH;
+    BARK_PUSH = process.env.Horsemi_EPIC_FREE_BARK_PUSH;
   } else {
-    BARK_PUSH = `https://api.day.app/${process.env.BARK_PUSH}`;
+    BARK_PUSH = `https://api.day.app/${process.env.Horsemi_EPIC_FREE_BARK_PUSH}`;
   }
-  if (process.env.BARK_ICON) {
-    BARK_ICON = process.env.BARK_ICON;
+  if (process.env.Horsemi_EPIC_FREE_BARK_ICON) {
+    BARK_ICON = process.env.Horsemi_EPIC_FREE_BARK_ICON;
   }
-  if (process.env.BARK_SOUND) {
-    BARK_SOUND = process.env.BARK_SOUND;
+  if (process.env.Horsemi_EPIC_FREE_BARK_SOUND) {
+    BARK_SOUND = process.env.Horsemi_EPIC_FREE_BARK_SOUND;
   }
-  if (process.env.BARK_GROUP) {
-    BARK_GROUP = process.env.BARK_GROUP;
+  if (process.env.Horsemi_EPIC_FREE_BARK_GROUP) {
+    BARK_GROUP = process.env.Horsemi_EPIC_FREE_BARK_GROUP;
   }
 } else {
   if (
@@ -212,71 +212,75 @@ if (process.env.BARK_PUSH) {
     BARK_PUSH = `https://api.day.app/${BARK_PUSH}`;
   }
 }
-if (process.env.TG_BOT_TOKEN) {
-  TG_BOT_TOKEN = process.env.TG_BOT_TOKEN;
+if (process.env.Horsemi_EPIC_FREE_TG_BOT_TOKEN) {
+  TG_BOT_TOKEN = process.env.Horsemi_EPIC_FREE_TG_BOT_TOKEN;
 }
-if (process.env.TG_USER_ID) {
-  TG_USER_ID = process.env.TG_USER_ID;
+if (process.env.Horsemi_EPIC_FREE_TG_USER_ID) {
+  TG_USER_ID = process.env.Horsemi_EPIC_FREE_TG_USER_ID;
 }
-if (process.env.TG_PROXY_AUTH) TG_PROXY_AUTH = process.env.TG_PROXY_AUTH;
-if (process.env.TG_PROXY_HOST) TG_PROXY_HOST = process.env.TG_PROXY_HOST;
-if (process.env.TG_PROXY_PORT) TG_PROXY_PORT = process.env.TG_PROXY_PORT;
-if (process.env.TG_API_HOST) TG_API_HOST = process.env.TG_API_HOST;
+if (process.env.Horsemi_EPIC_FREE_TG_PROXY_AUTH)
+  TG_PROXY_AUTH = process.env.Horsemi_EPIC_FREE_TG_PROXY_AUTH;
+if (process.env.Horsemi_EPIC_FREE_TG_PROXY_HOST)
+  TG_PROXY_HOST = process.env.Horsemi_EPIC_FREE_TG_PROXY_HOST;
+if (process.env.Horsemi_EPIC_FREE_TG_PROXY_PORT)
+  TG_PROXY_PORT = process.env.Horsemi_EPIC_FREE_TG_PROXY_PORT;
+if (process.env.Horsemi_EPIC_FREE_TG_API_HOST)
+  TG_API_HOST = process.env.Horsemi_EPIC_FREE_TG_API_HOST;
 
-if (process.env.DD_BOT_TOKEN) {
-  DD_BOT_TOKEN = process.env.DD_BOT_TOKEN;
-  if (process.env.DD_BOT_SECRET) {
-    DD_BOT_SECRET = process.env.DD_BOT_SECRET;
+if (process.env.Horsemi_EPIC_FREE_DD_BOT_TOKEN) {
+  DD_BOT_TOKEN = process.env.Horsemi_EPIC_FREE_DD_BOT_TOKEN;
+  if (process.env.Horsemi_EPIC_FREE_DD_BOT_SECRET) {
+    DD_BOT_SECRET = process.env.Horsemi_EPIC_FREE_DD_BOT_SECRET;
   }
 }
 
-if (process.env.QYWX_KEY) {
-  QYWX_KEY = process.env.QYWX_KEY;
+if (process.env.Horsemi_EPIC_FREE_QYWX_KEY) {
+  QYWX_KEY = process.env.Horsemi_EPIC_FREE_QYWX_KEY;
 }
 
-if (process.env.QYWX_AM) {
-  QYWX_AM = process.env.QYWX_AM;
+if (process.env.Horsemi_EPIC_FREE_QYWX_AM) {
+  QYWX_AM = process.env.Horsemi_EPIC_FREE_QYWX_AM;
 }
 
-if (process.env.IGOT_PUSH_KEY) {
-  IGOT_PUSH_KEY = process.env.IGOT_PUSH_KEY;
+if (process.env.Horsemi_EPIC_FREE_IGOT_PUSH_KEY) {
+  IGOT_PUSH_KEY = process.env.Horsemi_EPIC_FREE_IGOT_PUSH_KEY;
 }
 
-if (process.env.PUSH_PLUS_TOKEN) {
-  PUSH_PLUS_TOKEN = process.env.PUSH_PLUS_TOKEN;
+if (process.env.Horsemi_EPIC_FREE_PUSH_PLUS_TOKEN) {
+  PUSH_PLUS_TOKEN = process.env.Horsemi_EPIC_FREE_PUSH_PLUS_TOKEN;
 }
-if (process.env.PUSH_PLUS_USER) {
-  PUSH_PLUS_USER = process.env.PUSH_PLUS_USER;
-}
-
-if (process.env.AIBOTK_KEY) {
-  AIBOTK_KEY = process.env.AIBOTK_KEY;
-}
-if (process.env.AIBOTK_TYPE) {
-  AIBOTK_TYPE = process.env.AIBOTK_TYPE;
-}
-if (process.env.AIBOTK_NAME) {
-  AIBOTK_NAME = process.env.AIBOTK_NAME;
+if (process.env.Horsemi_EPIC_FREE_PUSH_PLUS_USER) {
+  PUSH_PLUS_USER = process.env.Horsemi_EPIC_FREE_PUSH_PLUS_USER;
 }
 
-if (process.env.FSKEY) {
-  FSKEY = process.env.FSKEY;
+if (process.env.Horsemi_EPIC_FREE_AIBOTK_KEY) {
+  AIBOTK_KEY = process.env.Horsemi_EPIC_FREE_AIBOTK_KEY;
+}
+if (process.env.Horsemi_EPIC_FREE_AIBOTK_TYPE) {
+  AIBOTK_TYPE = process.env.Horsemi_EPIC_FREE_AIBOTK_TYPE;
+}
+if (process.env.Horsemi_EPIC_FREE_AIBOTK_NAME) {
+  AIBOTK_NAME = process.env.Horsemi_EPIC_FREE_AIBOTK_NAME;
 }
 
-if (process.env.SMTP_SERVER) {
-  SMTP_SERVER = process.env.SMTP_SERVER;
+if (process.env.Horsemi_EPIC_FREE_FSKEY) {
+  FSKEY = process.env.Horsemi_EPIC_FREE_FSKEY;
 }
-if (process.env.SMTP_SSL) {
-  SMTP_SSL = process.env.SMTP_SSL;
+
+if (process.env.Horsemi_EPIC_FREE_SMTP_SERVER) {
+  SMTP_SERVER = process.env.Horsemi_EPIC_FREE_SMTP_SERVER;
 }
-if (process.env.SMTP_EMAIL) {
-  SMTP_EMAIL = process.env.SMTP_EMAIL;
+if (process.env.Horsemi_EPIC_FREE_SMTP_SSL) {
+  SMTP_SSL = process.env.Horsemi_EPIC_FREE_SMTP_SSL;
 }
-if (process.env.SMTP_PASSWORD) {
-  SMTP_PASSWORD = process.env.SMTP_PASSWORD;
+if (process.env.Horsemi_EPIC_FREE_SMTP_EMAIL) {
+  SMTP_EMAIL = process.env.Horsemi_EPIC_FREE_SMTP_EMAIL;
 }
-if (process.env.SMTP_NAME) {
-  SMTP_NAME = process.env.SMTP_NAME;
+if (process.env.Horsemi_EPIC_FREE_SMTP_PASSWORD) {
+  SMTP_PASSWORD = process.env.Horsemi_EPIC_FREE_SMTP_PASSWORD;
+}
+if (process.env.Horsemi_EPIC_FREE_SMTP_NAME) {
+  SMTP_NAME = process.env.Horsemi_EPIC_FREE_SMTP_NAME;
 }
 //==========================云端环境变量的判断与接收=========================
 
@@ -292,26 +296,26 @@ async function sendNotify(
   text,
   desp,
   params = {},
-  author = '\n\n本通知 By：https://github.com/whyour/qinglong',
+  author = '\n\n本通知 By：https://github.com/whyour/qinglong'
 ) {
   //提供6种通知
   desp += author; //增加作者信息，防止被贩卖等
 
   // 根据标题跳过一些消息推送，环境变量：SKIP_PUSH_TITLE 用回车分隔
-  let skipTitle = process.env.SKIP_PUSH_TITLE
-  if(skipTitle) {
-    if(skipTitle.split('\n').includes(text)) {
-      console.info(text + "在SKIP_PUSH_TITLE环境变量内，跳过推送！");
-      return
-    }
-  }
+  //   let skipTitle = process.env.Horsemi_EPIC_FREE_SKIP_PUSH_TITLE
+  //   if(skipTitle) {
+  //     if(skipTitle.split('\n').includes(text)) {
+  //       console.info(text + "在SKIP_PUSH_TITLE环境变量内，跳过推送！");
+  //       return
+  //     }
+  //   }
 
   await Promise.all([
     serverNotify(text, desp), //微信server酱
     pushPlusNotify(text, desp), //pushplus(推送加)
   ]);
   //由于上述两种微信通知需点击进去才能查看到详情，故text(标题内容)携带了账号序号以及昵称信息，方便不点击也可知道是哪个京东哪个活动
-  text = text.match(/.*?(?=\s?-)/g) ? text.match(/.*?(?=\s?-)/g)[0] : text;
+  //   text = text.match(/.*?(?=\s?-)/g) ? text.match(/.*?(?=\s?-)/g)[0] : text;
   await Promise.all([
     BarkNotify(text, desp, params), //iOS Bark APP
     tgBotNotify(text, desp), //telegram 机器人
@@ -335,7 +339,7 @@ function gotifyNotify(text, desp) {
       const options = {
         url: `${GOTIFY_URL}/message?token=${GOTIFY_TOKEN}`,
         body: `title=${encodeURIComponent(text)}&message=${encodeURIComponent(
-          desp,
+          desp
         )}&priority=${GOTIFY_PRIORITY}`,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -532,9 +536,9 @@ function BarkNotify(text, desp, params = {}) {
     if (BARK_PUSH) {
       const options = {
         url: `${BARK_PUSH}/${encodeURIComponent(text)}/${encodeURIComponent(
-          desp,
+          desp
         )}?icon=${BARK_ICON}&sound=${BARK_SOUND}&group=${BARK_GROUP}&${querystring.stringify(
-          params,
+          params
         )}`,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -605,7 +609,7 @@ function tgBotNotify(text, desp) {
               console.log('Telegram发送通知消息成功🎉。\n');
             } else if (data.error_code === 400) {
               console.log(
-                '请主动给bot发送一条消息并检查接收用户ID是否正确。\n',
+                '请主动给bot发送一条消息并检查接收用户ID是否正确。\n'
               );
             } else if (data.error_code === 401) {
               console.log('Telegram bot token 填写错误。\n');
@@ -627,9 +631,10 @@ function ddBotNotify(text, desp) {
     const options = {
       url: `https://oapi.dingtalk.com/robot/send?access_token=${DD_BOT_TOKEN}`,
       json: {
-        msgtype: 'text',
-        text: {
-          content: `${text}\n\n${desp}`,
+        msgtype: 'markdown',
+        markdown: {
+          title: 'Epic白嫖小贴士',
+          text: text,
         },
       },
       headers: {
@@ -837,7 +842,7 @@ function qywxamNotify(text, desp) {
               console.log(
                 '成员ID:' +
                   ChangeUserId(desp) +
-                  '企业微信应用消息发送通知消息失败！！\n',
+                  '企业微信应用消息发送通知消息失败！！\n'
               );
               console.log(err);
             } else {
@@ -846,7 +851,7 @@ function qywxamNotify(text, desp) {
                 console.log(
                   '成员ID:' +
                     ChangeUserId(desp) +
-                    '企业微信应用消息发送通知消息成功🎉。\n',
+                    '企业微信应用消息发送通知消息成功🎉。\n'
                 );
               } else {
                 console.log(`${data.errmsg}\n`);
@@ -932,7 +937,7 @@ function pushPlusNotify(text, desp) {
             console.log(
               `push+发送${
                 PUSH_PLUS_USER ? '一对多' : '一对一'
-              }通知消息失败！！\n`,
+              }通知消息失败！！\n`
             );
             console.log(err);
           } else {
@@ -941,13 +946,13 @@ function pushPlusNotify(text, desp) {
               console.log(
                 `push+发送${
                   PUSH_PLUS_USER ? '一对多' : '一对一'
-                }通知消息完成。\n`,
+                }通知消息完成。\n`
               );
             } else {
               console.log(
                 `push+发送${
                   PUSH_PLUS_USER ? '一对多' : '一对一'
-                }通知消息失败：${data.msg}\n`,
+                }通知消息失败：${data.msg}\n`
               );
             }
           }
@@ -1075,7 +1080,7 @@ async function smtpNotify(text, desp) {
           user: SMTP_EMAIL,
           pass: SMTP_PASSWORD,
         },
-      },
+      }
     );
 
     const addr = SMTP_NAME ? `"${SMTP_NAME}" <${SMTP_EMAIL}>` : SMTP_EMAIL;

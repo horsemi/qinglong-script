@@ -64,11 +64,11 @@ class EpicFreeGameBot {
       // 拼接成Markdown格式
       const markdownContent = games
         .map((game) => {
-          return `# ${game.title}\n#### [点击领取](${game.url})\n![游戏图片](${game.image})`;
+          return `# ${game.title}\n#### [点击领取](${game.url})\n ${
+            game.image ? `![游戏图片](${game.image})` : ''
+          }`;
         })
         .join('\n');
-      console.log(markdownContent);
-
       return {
         markdownContent,
       };
@@ -83,9 +83,12 @@ class EpicFreeGameBot {
 
   const { markdownContent } = await bot.run();
 
-  const msg = `现在是${new Date().toLocaleString()}，${markdownContent}`;
-
-  await notify.sendNotify(`Epic白嫖小贴士`, msg, {}, '本通知 By：小鹿');
+  await notify.sendNotify(
+    markdownContent,
+    `Epic白嫖小贴士`,
+    {},
+    '本通知 By：小鹿'
+  );
 })()
   .catch((e) => {
     $.log('', `❌失败! 原因: ${e}!`, '');
