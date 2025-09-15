@@ -41,7 +41,9 @@ class EpicFreeGameBot {
             let img = '';
             for (const imgkey in elements[key].keyImages) {
               if (
-                elements[key].keyImages[imgkey].type == 'DieselStoreFrontWide'
+                elements[key].keyImages[imgkey].type ==
+                  'DieselStoreFrontWide' ||
+                elements[key].keyImages[imgkey].type == 'OfferImageWide'
               ) {
                 img = elements[key].keyImages[imgkey].url;
                 break;
@@ -51,7 +53,7 @@ class EpicFreeGameBot {
               title: elements[key].title,
               url:
                 'https://www.epicgames.com/store/zh-Hant/p/' +
-                elements[key].productSlug,
+                  elements[key].urlSlug || elements[key].productSlug,
               id: elements[key].id,
               image: img,
             });
