@@ -39,6 +39,5 @@ function getToken() {
       .catch((error) => reject(error));
   });
 }
-getToken();
 
 module.exports = getToken;
