@@ -49,11 +49,22 @@ class EpicFreeGameBot {
                 break;
               }
             }
+            let projectKey = '';
+            if (
+              Array.isArray(elements[key]?.catalogNs?.mappings) &&
+              elements[key]?.catalogNs?.mappings?.length > 0
+            ) {
+              projectKey =
+                elements[key]?.catalogNs?.mappings[0].pageType === 'productHome'
+                  ? elements[key]?.catalogNs?.mappings[0].pageSlug
+                  : '';
+            }
             games.push({
               title: elements[key].title,
               url:
-                'https://www.epicgames.com/store/zh-Hant/p/' +
-                  elements[key].urlSlug || elements[key].productSlug,
+                'https://www.epicgames.com/store/zh-Hant/p/' + projectKey ||
+                elements[key].urlSlug ||
+                elements[key].productSlug,
               id: elements[key].id,
               image: img,
             });
