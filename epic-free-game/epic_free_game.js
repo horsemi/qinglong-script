@@ -59,12 +59,14 @@ class EpicFreeGameBot {
                   ? elements[key]?.catalogNs?.mappings[0].pageSlug
                   : '';
             }
+            const urlSlug = elements[key].urlSlug;
+            const productSlug = elements[key].productSlug;
+
             games.push({
               title: elements[key].title,
               url:
-                'https://www.epicgames.com/store/zh-Hant/p/' + projectKey ||
-                elements[key].urlSlug ||
-                elements[key].productSlug,
+                'https://www.epicgames.com/store/zh-Hant/p/' + (projectKey ? projectKey : productSlug ? productSlug : urlSlug
+                ),
               id: elements[key].id,
               image: img,
             });
