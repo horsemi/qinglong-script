@@ -165,8 +165,8 @@ class WeatherTaskBot {
     msg,
     {
       url: fxLink,
-      // group: "xiaolu_trips",
-      // sound: 'minuet.typewriters'
+      group: "xiaolu_trips",
+      sound: 'minuet.caf'
     },
     '本通知 By：小鹿'
   );
